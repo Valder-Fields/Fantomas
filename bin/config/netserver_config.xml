@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+	<!-- 时间单位均为毫秒(ms) -->
+	
+	<!-- 服务器参数 -->
+	<SERVER uuid="10000" exeId="3" listenPort="60001" serviceProcInter="30" saveFileInter="1800" playRate="1" heartCheckInter="1000" heartRecvTimeLimit="24000" userThreadFlag="0" userThreadInter="15" forwardingMode="0">
+		
+	</SERVER>
+
+	<CLIENT enableFlag="1" uuid="10001" >
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+		<COMM ipAddr="192.169.100.39" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10003" >
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+		<COMM ipAddr="192.169.100.19" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10007" >
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+		<COMM ipAddr="192.169.100.222" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10008" >
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+		<COMM ipAddr="192.169.100.15" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10002" >
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+		<COMM ipAddr="192.169.100.24" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10004" >
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+		<COMM ipAddr="192.169.100.40" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10005" >
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+		<COMM ipAddr="192.169.100.199" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10006" >
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+		<COMM ipAddr="192.169.100.145" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10010" >
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+		<COMM ipAddr="192.169.100.52" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10100" >
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+		<COMM ipAddr="192.169.100.47" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10101" >
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+		<COMM ipAddr="192.169.100.57" enableFlag="1" />
+	</CLIENT>
+	
+	<CLIENT enableFlag="1" uuid="10102" >
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+		<COMM ipAddr="192.169.100.45" enableFlag="1" />
+	</CLIENT>
+	
+	
+</CONFIG>

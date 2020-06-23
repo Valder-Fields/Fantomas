@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 通用配置 -->
+<CONFIG>
+	
+	<!-- 席位字典表 -->
+	<ROLE_CFG>
+		<ROLE id="1" desc="指挥席" />
+		<ROLE id="2" desc="车长席" />
+		<ROLE id="3" desc="光电操作席" />
+		<ROLE id="4" desc="雷达操作席" />
+		<ROLE id="5" desc="DBB仿真" />
+	</ROLE_CFG>
+	
+	<!-- 程序参数表 -->
+	<PROGRAM_CFG>
+		<PROGRAM id="1"  name="SysController.exe"		desc="系统管理控制端" 		fullPath="" ctlFlag="1" />
+		<PROGRAM id="2"  name="SysClient.exe"				desc="系统管理客户端" 		fullPath="" ctlFlag="1" />		
+		<PROGRAM id="3"  name="NetServer.exe"				desc="联网服务器"		  		fullPath="" ctlFlag="1" />
+		<PROGRAM id="10" name="mnq.exe"							desc="训练端" 						fullPath="" ctlFlag="1" />
+		<PROGRAM id="11" name="tzzcX.exe"						desc="效应器" 						fullPath="" ctlFlag="1" />
+		<PROGRAM id="20" name="dkd.exe"							desc="导控端" 						fullPath="" ctlFlag="1" />				
+		<PROGRAM id="30" name="SimControl.bat"			desc="仿真服务平台子系统" fullPath="" ctlFlag="1" />
+		<PROGRAM id="31" name="UnityProxy.exe"			desc="" 									fullPath="" ctlFlag="0" />
+		<PROGRAM id="32" name="Situation.exe"				desc="" 									fullPath="" ctlFlag="0" />
+		<PROGRAM id="33" name="ControlProxy.exe"		desc="" 									fullPath="" ctlFlag="0" />
+		<PROGRAM id="40" name="AudioClient.exe"			desc="话音客户端" 				fullPath="" ctlFlag="1" />
+		<PROGRAM id="41" name="AudioControl.exe"		desc="话音控制端" 				fullPath="" ctlFlag="1" />
+		<PROGRAM id="42" name="xxx.sh"							desc="话音服务器" 				fullPath="" ctlFlag="1" />		
+		<PROGRAM id="50" name="RadarTerminal.exe"		desc="雷达控制端" 				fullPath="" ctlFlag="1" />
+		<PROGRAM id="51" name="PETerminal.exe"			desc="光电控制端" 				fullPath="" ctlFlag="1" />
+		<PROGRAM id="51" name="PERadarTerminal.exe"	desc="光电车雷达控制端"   fullPath="" ctlFlag="1" />
+	</PROGRAM_CFG>
+	
+	<!-- PC参数表 -->
+	<COMPUTER_CFG>
+		<COMPUTER no="1" uuid="10000" ip="192.168.0.1" desc="教员机" />
+		<COMPUTER no="2" uuid="10001" ip="192.168.0.1" desc="学员机1" />
+		<COMPUTER no="3" uuid="10002" ip="192.168.0.1" desc="学员机2" />
+		<COMPUTER no="4" uuid="10003" ip="192.168.0.1" desc="学员机3" />
+	</COMPUTER_CFG>
+	
+	<!-- 席位-程序 映射表 -->
+	<ROLE_PROG_MAP>
+		<ROLE_PROG role="1" prog="20" />
+		<ROLE_PROG role="1" prog="11" />
+		<ROLE_PROG role="1" prog="41" />
+		
+		<ROLE_PROG role="2" prog="10" />
+		<ROLE_PROG role="2" prog="40" />
+		
+		<ROLE_PROG role="3" prog="51" />
+		<ROLE_PROG role="3" prog="40" />
+		
+		<ROLE_PROG role="4" prog="50" />
+		<ROLE_PROG role="4" prog="40" />
+		
+		<ROLE_PROG role="5" prog="30" />
+		
+	</ROLE_PROG_MAP>
+	
+	<!-- PC-席位 映射表 -->
+	
+</CONFIG>

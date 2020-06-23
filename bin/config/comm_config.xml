@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+	<!-- 时间单位均为毫秒(ms) -->
+	
+	<CLIENT uuid="10002" exeId="2">
+		
+	</CLIENT>
+	
+	<!-- 服务器参数 -->
+	<SERVER ipAddr="127.0.0.1" port="60001" heartCheckInter="1000" heartSendTimeLimit="5000" heartRecvTimeLimit="11000">
+
+	</SERVER>
+
+	
+</CONFIG>

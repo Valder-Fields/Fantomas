@@ -18,7 +18,7 @@
 #ifndef __SCOMMUNICATOR_DEF_H__
 #define __SCOMMUNICATOR_DEF_H__
 
-#if defined (WIN32)
+#if defined (_WIN32)
 #	if defined (LIB_SCOMMUNICATOR)
 #		define	 SCOMMUNICATOR_API		__declspec(dllexport)
 #	else
@@ -34,7 +34,7 @@
 #include <malloc.h>
 #include <time.h>
 
-#if defined(WIN32)
+#if defined(_WIN32)
     #include <direct.h>
     #include <io.h>
     #include <assert.h>
@@ -76,7 +76,7 @@
 #define     COMMON_STRLEN_1024      1024
 
 //时间相关
-#if defined(WIN32) && !defined (CYGWIN)
+#if defined(_WIN32) && !defined (CYGWIN)
 typedef __int64 int64_t;
 #else
 typedef long long int64t;

@@ -1,11 +1,11 @@
 ﻿#include "comm_base.h"
 
-#if defined(WIN32)
+#if defined(_WIN32)
 //+++++++++++++++++++++++++ FUNCTION DESCRIPTION ++++++++++++++++++++++++++++++
 //
 // NAME        : SocketStartup
 //
-// DESCRIPTION : 初始化SOCKET资源(WIN32)
+// DESCRIPTION : 初始化SOCKET资源(_WIN32)
 //
 // COMPLETION
 // INPUT       :
@@ -33,7 +33,7 @@ void CommBase::SocketStartup()
 //
 // NAME        : SocketClenup
 //
-// DESCRIPTION : 释放SOCKET资源(WIN32)
+// DESCRIPTION : 释放SOCKET资源(_WIN32)
 //
 // COMPLETION
 // INPUT       :
@@ -54,7 +54,7 @@ int CommBase::CloseSocket(int sock, int retry)
         ioctlsocket(sock, FIONBIO, &noblock_flag);
         for (int i=0; i<retry; i++)	{
 
-#if defined (WIN32)
+#if defined (_WIN32)
             int ret = closesocket(sock);
 #elif defined (__unix)
             int ret = close(sock);
@@ -86,7 +86,7 @@ int CommBase::GetLastError(int sockFlag)
     #else
           return errno;
     #endif
-#elif defined(WIN32)
+#elif defined(_WIN32)
     if (sockFlag == 0) {
         return ::GetLastError();
     }

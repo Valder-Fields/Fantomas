@@ -315,7 +315,7 @@ int CommUdpSocket::Read(char *buf, int bufLen)
     int rxnum = recvfrom(m_socket, buf, bufLen, 0, (struct sockaddr *)&m_fromAddr, &fromAddrLen);
 
     if(rxnum==
-#if defined(WIN32)
+#if defined(_WIN32)
         SOCKET_ERROR
 #elif defined(__unix)
         -1
@@ -335,7 +335,7 @@ int CommUdpSocket::Write(char *buf, int bufLen)
 
     int txnum = sendto(m_socket, (char *)buf, bufLen, 0, (struct sockaddr *)&m_destAddr, sizeof(struct sockaddr));
     if (txnum ==
-#if defined(WIN32)
+#if defined(_WIN32)
         SOCKET_ERROR
 #elif defined(__unix)
         -1
@@ -360,7 +360,7 @@ int CommUdpSocket::EnableBroadcast(bool enable)
 {
     int ret = FALSE;
     if (enable) {
-#if defined(WIN32)
+#if defined(_WIN32)
         int temp = 1;
         ret = setsockopt(m_socket,SOL_SOCKET,SO_BROADCAST,(char *)&temp,sizeof(temp));
         if (ret < 0) {
@@ -372,7 +372,7 @@ int CommUdpSocket::EnableBroadcast(bool enable)
 #endif
     }
     else {
-#if defined(WIN32)
+#if defined(_WIN32)
         int temp = 0;
         ret = setsockopt(m_socket,SOL_SOCKET,SO_BROADCAST,(char *)&temp,sizeof(temp));
         if (ret < 0) {

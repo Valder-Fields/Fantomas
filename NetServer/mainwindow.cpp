@@ -20,6 +20,18 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_runTimer, &QTimer::timeout, this, &MainWindow::OnRunTimer);
     m_runTimer->start(1000);
 
+    //udp参数
+    /*UdpSocketCfg cfg;
+    memset(&cfg, 0, sizeof(UdpSocketCfg));
+    cfg.mode = COMMUDP_MODE_UNICASTSEND;
+    cfg.port = 20086;
+    sprintf(cfg.destIp, "%s", "192.169.100.47");
+
+    int ret = service.InitCommUdpSocket(cfg);
+    if (ret == FALSE) {
+        assert(!"service.InitCommUdpSocket error!");
+    }*/
+
     service.Start();
 }
 
@@ -288,6 +300,7 @@ void MainWindow::OnRunTimer()
 
 void MainWindow::MessageCodeSlot(MessageCode msg)
 {
+    (void)msg;
     /*switch (msg.code) {
     case 1:
     {

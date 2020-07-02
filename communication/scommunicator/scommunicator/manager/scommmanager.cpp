@@ -177,7 +177,7 @@ void SCommManager::ReadProc()
                 int64_t durTime = etime-btime;
                 if ((durTime)>=0) {
                     if (0) {
-                        if (rxLen > 0) qDebug()<<"+++++++++++++++read durTime:"<<durTime<<"size:"<<rxLen<<QTime::currentTime()<<" IP:"<<glo_clients[cliId].commData[commId].ipAddr;
+                        if (rxLen > 0) qDebug()<<"+++++++++++++++read durTime:"<<durTime<<"size:"<<rxLen<<"cliId:"<<cliId<<"commId:"<<commId<<QTime::currentTime();
                     }
                 }
 
@@ -246,7 +246,7 @@ void SCommManager::ForwardingProc()
 
                 if (durTime >= 0) {
                     if (0) {
-                        if (ret > 0) qDebug()<<"---------------write durTime:"<<durTime<<"size:"<<ret<<QTime::currentTime()<<" IP:"<<glo_clients[cliId].commData[commId].ipAddr<<"socket:"<<glo_clients[cliId].commData[commId].socket;
+                        if (ret > 0) qDebug()<<"---------------write durTime:"<<durTime<<"size:"<<ret<<"cliId:"<<cliId<<"commId:"<<commId<<QTime::currentTime();
                     }
                 }
             }
@@ -327,7 +327,7 @@ void SCommManager::ForwardingProc()
                     int64_t durTime = etime-btime;
                     if (0) {
                         if (durTime >= 0) {
-                            qDebug()<<"---------------forw durTime:"<<durTime<<"size:"<<ret<<QTime::currentTime()<<" IP:"<<glo_clients[cliId].commData[commId].ipAddr<<"socket:"<<glo_clients[cliId].commData[commId].socket;
+                            qDebug()<<"---------------forw durTime:"<<durTime<<"size:"<<ret<<"cliId:"<<cliId<<"commId:"<<commId<<QTime::currentTime();
                         }
                     }
                 }

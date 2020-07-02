@@ -18,7 +18,7 @@
 #ifndef __NETSERVICE_DEF_H__
 #define __NETSERVICE_DEF_H__
 
-#if defined (WIN32)
+#if defined (_WIN32)
 #	if defined (LIB_NETSERVICE)
 #		define	 NETSERVICE_API		__declspec(dllexport)
 #	else

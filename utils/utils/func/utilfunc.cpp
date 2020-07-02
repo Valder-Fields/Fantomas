@@ -34,7 +34,20 @@ void UtilFunc::GetApplicationDirPath(char *path)
         return;
     }
 
-    sprintf(path, "%s", QCoreApplication::applicationDirPath().toLocal8Bit().constData());
+    //判断是否有QApplication实例,以判断可否使用QApplication方法
+    QCoreApplication *app = QCoreApplication::instance();
+    if (app != nullptr) {
+        sprintf(path, "%s", QCoreApplication::applicationDirPath().toLocal8Bit().constData());
+        return;
+    }
+    else {
+#if defined (_WIN32)
+        GetModuleFileNameA(NULL, path, MAX_PATH);
+        (strrchr(path, '\\'))[0] = 0; // 删除文件名，只获得路径字串
+#else
+        //todo
+#endif
+    }
 }
 
 int64_t UtilFunc::GetSysTimeMS()

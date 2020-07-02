@@ -34,7 +34,7 @@
 #define     COMMON_STRLEN_1024      1024
 
 //时间相关
-#if defined(WIN32) && !defined (CYGWIN)
+#if defined(_WIN32) && !defined (CYGWIN)
 typedef __int64 int64_t;
 #else
 typedef long long int64t;

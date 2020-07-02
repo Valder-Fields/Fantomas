@@ -11,7 +11,7 @@ DWORD		glo_threadid_read;
 DWORD		glo_threadid_forwarding;
 DWORD		glo_threadid_dispatch;
 
-int	 glo_liveflag  = TRUE;
+int	 glo_liveflag  = FALSE;
 int  glo_threadnum = 0;
 
 CLIENT_COMM  glo_comm;
@@ -51,6 +51,13 @@ int CommService::StartCommProc()
  */
 int CommService::InitCommProc()
 {
+    if (glo_liveflag == TRUE) {
+        assert(!"Only one CommModule instance is allowed to start! Please check your code! - -...!");
+        return FALSE;
+    }
+
+    glo_liveflag = TRUE;
+
     if (CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)srv_readproc,         m_manager, 0, &glo_threadid_read)		== NULL) {
         return false;
     }
@@ -81,7 +88,7 @@ int  CommService::StopCommProc()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * @brief SocketStartup 初始化SOCKET资源(WIN32)
+ * @brief SocketStartup 初始化SOCKET资源(_WIN32)
  * @return
  */
 void CommService::SocketStartup()

@@ -137,6 +137,8 @@ void CommManager::ForwardingProc()
     //qint64 btime = QDateTime::currentDateTime().toMSecsSinceEpoch();
     int64_t btime = UtilFunc::GetSysTimeMS();
 
+    //if (0) qDebug()<<"-----------------"<<QTime::currentTime();
+
     int ret = 0, err = 0;
     char val;
 
@@ -152,6 +154,8 @@ void CommManager::ForwardingProc()
     }
 
     if (txbuf->onceBufLen > 0) {
+        //qDebug()<<"after  getBuf context++++++++head:"<<txbuf->head<<"tail:"<<txbuf->tail<<"onceBufLen:"<<txbuf->onceBufLen<<QTime::currentTime();
+
         ret = CommTcpSocket::Write(glo_comm.socket, (char *)txbuf->onceBuf, txbuf->onceBufLen);
         if (ret <= 0) {
             //通道重启流程
@@ -184,6 +188,8 @@ void CommManager::DispatchProc()
     if (isConnected() == FALSE) {
         return;
     }
+
+    //if (1) qDebug()<<"!!!!!!!!!!!!!!!!!"<<QTime::currentTime();
 
     //1.接收处理
     RxChannelProc();
@@ -311,6 +317,8 @@ int CommManager::SendFrame(int type, int length, unsigned char *value)
 
     if (m_protocol) {
         ret = m_protocol->MakeAWholeFrame(type, value, length, frame, frameLen);
+
+        //qDebug()<<"MakeAWholeFrame length:"<<length<<"frameLen:"<<frameLen<<QTime::currentTime();
     }
 
     if (ret != TRUE) {
@@ -318,7 +326,9 @@ int CommManager::SendFrame(int type, int length, unsigned char *value)
     }
 
     //2.由manager放入发送缓存
+    //qDebug()<<"before putBuf context--------head:"<<txbuf->head<<"tail:"<<txbuf->tail<<"onceBufLen:"<<txbuf->onceBufLen<<QTime::currentTime();
     ret = PutTxBuf(frame, frameLen);
+    //qDebug()<<"after  putBuf context--------head:"<<txbuf->head<<"tail:"<<txbuf->tail<<"onceBufLen:"<<txbuf->onceBufLen<<QTime::currentTime();
 
     //3.发送帧数+1
     glo_comm.runData.sendAllFrame++;

@@ -24,7 +24,7 @@ class COMMSOCKET_API CommBase
 {
 public:
 
-#if defined(WIN32)
+#if defined(_WIN32)
     //初始化socket,程序启动时用(win)
     static void     SocketStartup();
 

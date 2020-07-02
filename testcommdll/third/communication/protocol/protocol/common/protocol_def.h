@@ -20,7 +20,7 @@
 #define __PROTOCOL_DEF_H__
 
 
-#if defined (WIN32)
+#if defined (_WIN32)
 #	if defined (LIB_PROTOCOL)
 #		define	 PROTOCOL_API		__declspec(dllexport)
 #	else

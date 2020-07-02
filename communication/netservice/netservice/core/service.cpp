@@ -236,7 +236,7 @@ int BaseNetService::RxChannelProc(int cliId, int commId)
 
                 PutTxBuf(cliId, commId, GetRxBufPtr(cliId, commId)->onceFrame, GetRxBufPtr(cliId, commId)->onceFrameLen);
 
-                if (0) qDebug()<<"recv Heartbeat!!!!!!!!!!!!!!!!!! IP:"<<GetClientData(cliId)->commData[commId].ipAddr<<QTime::currentTime();
+                if (0) qDebug()<<"recv Heartbeat!!!!!!!!!!!!!!!!!!"<<"cliId:"<<cliId<<"commId:"<<commId<<QTime::currentTime();
             }
                 break;
 
@@ -785,7 +785,7 @@ int BaseNetService::PlayProcByRoomId(int roomId)
 
     case ControlTrain::Stop:
     {
-        qDebug()<<"...................play finish! indexCount:"<<playData->procData.indexCount;
+        qDebug()<<"...................play finish! indexCount:"<<playData->procData.indexCount<<QTime::currentTime();;
 
         //1.初始化PlayData
         if (playData->procData.fileBuf) {
@@ -825,7 +825,7 @@ int BaseNetService::PlayProcByRoomId(int roomId)
     int64_t etime = UtilFunc::GetSysTimeMS();
     int64_t durTime = etime-btime;
     if ((durTime)>=0) {
-        if (1) qDebug()<<"!!!!!!!!!!!!!!!!!!!!!!!!!!PlayProcByRoomId roomId:"<<roomId<<"durTime:"<<durTime<<QTime::currentTime();
+        if (0) qDebug()<<"!!!!!!!!!!!!!!!!!!!!!!!!!!PlayProcByRoomId roomId:"<<roomId<<"durTime:"<<durTime<<QTime::currentTime();
     }
 
     return TRUE;

@@ -25,7 +25,7 @@
 #include <errno.h>
 #include <time.h>
 
-#if defined (WIN32)
+#if defined (_WIN32)
 #	if defined (LIB_COMMSOCKET)
 #		define	 COMMSOCKET_API		__declspec(dllexport)
 #	else
@@ -35,11 +35,11 @@
 #	define	 COMMSOCKET_API
 #endif
 
-#if defined(WIN32)
+#if defined(_WIN32)
 #	include <windows.h>
 #	include <winsock.h>
 
-#if defined(WIN32) && defined(_DEBUG) && defined(_MSC_VER) && (_MSC_VER <= 1200 )
+#if defined(_WIN32) && defined(_DEBUG) && defined(_MSC_VER) && (_MSC_VER <= 1200 )
 #include <crtdbg.h>
 #endif
 

@@ -15,7 +15,7 @@ DWORD		glo_threadid_dispatch;
 DWORD		glo_threadid_service;
 DWORD		glo_threadid_userthread;
 
-int	 glo_liveflag  = TRUE;
+int	 glo_liveflag  = FALSE;
 int  glo_threadnum = 0;
 
 NETSRV_SRVDATA glo_server;
@@ -65,6 +65,13 @@ int SCommService::StartCommProc()
  */
 int SCommService::InitCommProc()
 {
+    if (glo_liveflag == TRUE) {
+        assert(!"Only one CommModule instance is allowed to start! Please check your code! - -...!");
+        return FALSE;
+    }
+
+    glo_liveflag = TRUE;
+
     //udp初始化
     commUdpSocket = new CommUdpSocket();
     if (commUdpSocket == NULL) {
@@ -115,7 +122,7 @@ int  SCommService::StopCommProc()
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * @brief SocketStartup 初始化SOCKET资源(WIN32)
+ * @brief SocketStartup 初始化SOCKET资源(_WIN32)
  * @return
  */
 void SCommService::SocketStartup()
